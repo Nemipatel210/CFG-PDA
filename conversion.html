@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Conversion Type</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Conversion Type</h1>
+    <form action="#" id="conversionForm">
+        <label for="conversionType">Choose a Conversion Type:</label>
+        <select name="conversionType" id="conversionType">
+            <option value="pda_to_cfg">PDA to CFG</option>
+            <option value="cfg_to_pda">CFG to PDA</option>
+        </select>
+        <button type="button" onclick="redirect()">Go</button>
+    </form>
+
+    <script>
+        function redirect() {
+            var selectedOption = document.getElementById("conversionType").value;
+            if (selectedOption === "pda_to_cfg") {
+                window.location.href = "pda_to_cfg.html";
+            } else if (selectedOption === "cfg_to_pda") {
+                window.location.href = "cfg_to_pda.html";
+            }
+        }
+    </script>
+</body>
+</html>

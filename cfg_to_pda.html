@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFG to PDA Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 12px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CFG to PDA Converter</h1>
+    <form id="cfgToPdaForm">
+        <label for="nontermStates">Non-terminal States (Space-separated):</label>
+        <input type="text" id="nontermStates" name="nontermStates"><br><br>
+
+        <label for="termStates">Terminal States (Space-separated):</label>
+        <input type="text" id="termStates" name="termStates"><br><br>
+
+        <label for="productions">Production Rules:</label>
+        <textarea id="productions" name="productions" rows="5"></textarea><br><br>
+
+        <button type="button" onclick="convertCfgToPda()">Convert</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="cfg_to_pda.js"></script>
+</body>
+
+</html>
